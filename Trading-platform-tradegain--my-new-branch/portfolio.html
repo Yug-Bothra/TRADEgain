@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Page</title>
+    <!-- <link rel="stylesheet" href="1.css" /> -->
+    
+    <style>
+        /* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the body background to a dark gradient with smooth font */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #000428, #004e92);
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Add animation to the body for smooth entrance */
+body {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Navigation styling */
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #ff6b6b;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 8px 15px rgba(255, 107, 107, 0.2);
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #ff4757;
+  box-shadow: 0 12px 20px rgba(255, 71, 87, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Main Portfolio Container */
+.position {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: slideUp 1s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Slide-up animation for portfolio */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add some spacing and style to the heading */
+.position h4 {
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #76c7c0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Portfolio Items */
+.position p {
+  font-size: 18px;
+  line-height: 2;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Last item should not have a border */
+.position p:last-child {
+  border-bottom: none;
+}
+
+/* Highlighted span for holdings */
+.position span {
+  font-weight: bold;
+  color: #ffd700; /* Gold for value */
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect for value span */
+.position p:hover span {
+  background: #ffd700;
+  color: #000;
+}
+
+/* Fade-in animation for the page */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .position {
+    padding: 20px;
+    width: 90%;
+  }
+}
+
+    </style>
+
+    <style>
+
+    </style>
+
+    
+
+</head>
+<body>
+    <!-- Navigation to Trading Page -->
+    <div class="nav">
+        <a href="buy-sell.html">Go to Trading Page</a>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="position">
+        <h4>Portfolio:</h4>
+        <p>Bitcoin (BTC): <span id="btc-holdings">0</span> BTC</p>
+        <p>Ethereum (ETH): <span id="eth-holdings">0</span> ETH</p>
+        <p>Binance Coin (BNB): <span id="bnb-holdings">0</span> BNB</p>
+        <!-- <p>Binance Coin (BNB): <span id="bnb-holdings">0</span> BNB</p> -->
+        <p>Cardano (ADA): <span id="ada-holdings">0</span> ADA</p>
+        <p>Solana (SOL): <span id="sol-holdings">0</span> SOL</p>
+        <p>Polkadot (DOT): <span id="dot-holdings">0</span> DOT</p>
+        <p>XRP (XRP): <span id="xrp-holdings">0</span> XRP</p>
+        <p>Dogecoin (DOGE): <span id="doge-holdings">0</span> DOGE</p>
+        <p>Litecoin (LTC): <span id="ltc-holdings">0</span> LTC</p>
+        <p>Bananacoin (BANANA): <span id="banana-holdings">0</span> BANANA</p>
+    </div>
+
+    <script>
+        // Fetch data from localStorage or set default values for holdings
+        const cryptoHoldings = {
+            btc: localStorage.getItem("btcHoldings") || 0,
+            eth: localStorage.getItem("ethHoldings") || 0,
+            bnb: localStorage.getItem("bnbHoldings") || 0,
+            // bnb: localStorage.getItem("bnbHoldings") || 0,
+            ada: localStorage.getItem("adaHoldings") || 0,
+            sol: localStorage.getItem("solHoldings") || 0,
+            dot: localStorage.getItem("dotHoldings") || 0,
+            xrp: localStorage.getItem("xrpHoldings") || 0,
+            doge: localStorage.getItem("dogeHoldings") || 0,
+            ltc: localStorage.getItem("ltcHoldings") || 0,
+            banana: localStorage.getItem("bananaHoldings") || 0
+        };
+
+        // Update portfolio display
+        document.getElementById("btc-holdings").innerText = parseFloat(cryptoHoldings.btc).toFixed(8);
+        document.getElementById("eth-holdings").innerText = parseFloat(cryptoHoldings.eth).toFixed(8);
+        document.getElementById("bnb-holdings").innerText = parseFloat(cryptoHoldings.bnb).toFixed(8);
+        // document.getElementById("bnb-holdings").innerText = parseFloat(cryptoHoldings.bnb).toFixed(8);
+        document.getElementById("ada-holdings").innerText = parseFloat(cryptoHoldings.ada).toFixed(8);
+        document.getElementById("sol-holdings").innerText = parseFloat(cryptoHoldings.sol).toFixed(8);
+        document.getElementById("dot-holdings").innerText = parseFloat(cryptoHoldings.dot).toFixed(8);
+        document.getElementById("xrp-holdings").innerText = parseFloat(cryptoHoldings.xrp).toFixed(8);
+        document.getElementById("doge-holdings").innerText = parseFloat(cryptoHoldings.doge).toFixed(8);
+        document.getElementById("ltc-holdings").innerText = parseFloat(cryptoHoldings.ltc).toFixed(8);
+        document.getElementById("banana-holdings").innerText = parseFloat(cryptoHoldings.banana).toFixed(8);
+    </script>
+</body>
+</html>

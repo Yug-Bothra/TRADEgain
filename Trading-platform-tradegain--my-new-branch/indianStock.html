@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Indian stocks Recomendation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="indianstock.css">
+  </head>
+  <body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg bg-primary ">
+        <div class="container-fluid">
+          <a class="navbar-brand"  href="#">TRADEGAIN</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 p-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-house-add-fill  text-light " viewBox="0 0 16 16">
+                  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 1 1-1 0v-1h-1a.5.5 0 1 1 0-1h1v-1a.5.5 0 0 1 1 0"/>
+                  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+                  <path d="m8 3.293 4.712 4.712A4.5 4.5 0 0 0 8.758 15H3.5A1.5 1.5 0 0 1 2 13.5V9.293z"/>
+                </svg></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5501/TRADING%20WEB/form.html">Login</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                
+                <ul class="dropdown-menu ">
+                  <li><a class="dropdown-item" href="http://127.0.0.1:5501/btrail/indicator.html#">INDICATORS</a></li>
+                  <li><a class="dropdown-item" href="#">BROKERS</a></li>
+                  <li><a class="dropdown-item" href="#">TOOLS</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://www.screener.in/">SCREENER</a></li>
+                  <li><a class="dropdown-item" href="https://in.tradingview.com/">TRADING VIEW</a></li>
+                </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                  </li>
+            
+             
+              
+            
+          </div>
+        </div>
+      </nav>
+    
+    <!-- carousel -->
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="indianStockImg/1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="indianStockImg/2.jpg" class="d-block w-100" alt="...">
+            
+          </div>
+          <div class="carousel-item">
+            <img src="indianStockImg/3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="alert alert-primary" role="alert">
+        Check Out Some Stock Listed Here<a href="#" ></a>
+      </div>
+
+    <!-- grid -->
+    <div class="container-fluid">
+        <div class="sidebar ">
+          <ul class="item-list">
+            <li><button type="button" class="btn btn-outline-primary"><li onclick="showInfo('MAZADOC')" >MAZADOC</li></button>
+            <li><button type="button" class="btn btn-outline-primary"><li onclick="showInfo('ITC')">ITC</li></button>
+            <li><button type="button" class="btn btn-outline-primary"><li onclick="showInfo('TCS')">TCS</li></button>
+            <li><button type="button" class="btn btn-outline-primary"><li onclick="showInfo('SBI')">SBI</li></button>
+            <li><button type="button" class="btn btn-outline-primary"><li onclick="showInfo('ZYDUS LIFESCIENCE')">ZYDUS LIFESCIENCE</li></button>
+            <li><button type="button" class="btn btn-outline-primary"><li onclick="showInfo('COAL INDIA')">COAL INDIA</li></button>
+            <li><button type="button" class="btn btn-outline-primary"><li onclick="showInfo('ONGC')">ONGC</li></button>
+            <li><button type="button" class="btn btn-outline-primary"><li onclick="showInfo('SAIL')">SAIL</li></button>
+            <li><button type="button" class="btn btn-outline-primary"><li onclick="showInfo('BHEL')">BHEL</li></button>
+            <li><button type="button" class="btn btn-outline-primary"><li onclick="showInfo('VARUN BEVERAGES')">VARUN BEVERAGES</li></button>
+            
+          </ul>
+        </div>
+        <div class="content " >
+          <div id="MAZADOC" class="info">
+            <h2>MAZAGON DOCK SHIPBUIL LTD</h2><div class="nn">
+                <table>
+                    <tr class="t1">
+                        <td>Market Cap-=---₹ 1,00,044 Cr.</td>
+                        <td>Stock P/E-----51.6</td>
+                        <td>ROCE-----44.1 %</td>
+                        
+                    </tr>
+                    <tr class="t2">
+                        <td>NP Qtr Rs.Cr.-----696.10</td>
+                        <td>Book Value-----₹ 310</td>
+                        <td>ROE-----35.2 %</td>
+                        
+                    </tr>
+                    <tr class="t1">
+                        <td>High / Low-----₹ 5,860 / 1,717</td>
+                        <td>Dividend Yield-----0.31 %</td>
+                        <td>Face Value-----₹ 10.0</td>
+                        
+                    </tr>
+            
+                </table>
+                <section>
+                    Mazagon Dock Shipbuilders Limited (MDL), Mumbai, established in 1774, is a prominent shipyard in India. Initially a small dry dock, MDL has evolved into a renowned shipbuilding company. It has constructed 801 vessels since 1960, including warships, submarines, cargo/passenger ships, and offshore platforms.</section>
+            
+            </div>
+            <div class="chart"><a href="https://in.tradingview.com/chart/?symbol=NSE%3ANIFTY"><img src="indianStockImg/mag.png" alt=""></a></div>
+            
+        </div>
+        
+        <div id="ITC" class="info" style="display: none">
+            <h2>ITC</h2><div class="nn">
+                <table>
+                    <tr class="t1">
+                        <td>Market Cap-=---₹ 6,18,579 Cr.</td>
+                        <td>Stock P/E-----30.2</td>
+                        <td>ROCE-----37.5 %</td>
+                        
+                    </tr>
+                    <tr class="t2">
+                        <td>NP Qtr Rs.Cr.-----5176.99</td>
+                        <td>Book Value-----₹ 59.7</td>
+                        <td>ROE-----28.4 %</td>
+                        
+                    </tr>
+                    <tr class="t1">
+                        <td>High / Low-----₹ 511 / 399</td>
+                        <td>Dividend Yield-----2.78 %</td>
+                        <td>Face Value-----₹ 1.00</td>
+                        
+                    </tr>
+            
+                </table>
+                <section><br><br>
+                    Established in 1910, ITC is the largest cigarette manufacturer and seller in the country. ITC operates in five business segments at present — FMCG Cigarettes, FMCG Others, Hotels, Paperboards, Paper and Packaging, and Agri Business.</section>
+            
+            </div>
+            <div class="chart"><a href="https://in.tradingview.com/chart/?symbol=NSE%3ANIFTY"><img src="indianStockImg/ITC.png" alt=""></a></div>
+            
+        </div>
+        <div id="TCS" class="info" style="display: none">
+            <h2>Tata Consultancy Services Ltd</h2><div class="nn">
+                <table>
+                    <tr class="t1">
+                        <td>Market Cap-=---₹ 15,17,556 Cr.</td>
+                        <td>Stock P/E-----31.9</td>
+                        <td>ROCE-----64.3 %</td>
+                        
+                    </tr>
+                    <tr class="t2">
+                        <td>NP Qtr Rs.Cr.-----12105.00  </td>
+                        <td>Book Value-----₹ 250
+                        </td>
+                        <td>ROE-----51.5 %
+                        </td>
+                        
+                    </tr>
+                    <tr class="t1">
+                        <td>High / Low-----₹ 4,431 / 3,311</td>
+                        <td>Dividend Yield-----1.31 %</td>
+                        <td>Face Value-----₹ 1.00</td>
+                        
+                    </tr>
+            
+                </table>
+                <section>
+                    Tata Consultancy Services is the flagship company and a part of Tata group. It is an IT services, consulting and business solutions organization that has been partnering with many of the world's largest businesses in their transformation journeys for over 50 years. TCS offers a consulting-led, cognitive powered, integrated portfolio of business, technology and engineering services and solutions.</section>
+            
+            </div>
+            <div class="chart"><a href="https://in.tradingview.com/chart/?symbol=NSE%3ANIFTY"><img src="indianStockImg/TCS.png" alt=""></a></div>
+            
+        </div>
+        <div id="SBI" class="info" style="display: none">
+            <h2>State Bank of India</h2><div class="nn">
+                <table>
+                    <tr class="t1">
+                        <td>Market Cap-=---₹ 7,25,302 Cr.</td>
+                        <td>Stock P/E-----9.95                        </td>
+                        <td>ROCE-----6.16 %</td>
+                        
+                    </tr>
+                    <tr class="t2">
+                        <td>NP Qtr Rs.Cr-----20094.36</td>
+                        <td>Book Value-----₹ 465
+                        </td>
+                        <td>ROE-----17.3 %
+                        </td>
+                        
+                    </tr>
+                    <tr class="t1">
+                        <td>High / Low-----₹ 912 / 543</td>
+                        <td>Dividend Yield-----1.69 %</td>
+                        <td>Face Value-----₹ 1.00</td>
+                        
+                    </tr>
+            
+                </table>
+                <section><br><br>
+                    State Bank of India is a Fortune 500 company. It is an Indian Multinational, Public Sector banking and financial services statutory body headquartered in Mumbai. It is the largest and oldest bank in India with over 200 years of history</section>
+            
+            </div>
+            <div class="chart"><a href="https://in.tradingview.com/chart/?symbol=NSE%3ANIFTY"><img src="indianStockImg/SBI.png" alt=""></a></div>
+            
+            
+        </div>
+        <div id="ZYDUS LIFESCIENCE" class="info" style="display: none">
+            <h2>ZYDUS LIFESCIENCE</h2><div class="nn">
+                <table>
+                    <tr class="t1">
+                        <td>Market Cap-=---₹ 1,25,766 Cr.</td>
+                        <td>Stock P/E-----30.2                        </td>
+                        <td>ROCE-----22.3 %</td>
+                        
+                    </tr>
+                    <tr class="t2">
+                        <td>NP Qtr Rs.Cr.-----2860.51</td>
+                        <td>Book Value-----₹ 197
+                        </td>
+                        <td>ROE-----20.7 % %
+                        </td>
+                        
+                    </tr>
+                    <tr class="t1">
+                        <td>High / Low-----₹ 1,324 / 568</td>
+                        <td>Dividend Yield-----0.24 %</td>
+                        <td>Face Value-----₹ 1.00</td>
+                        
+                    </tr>
+            
+                </table>
+                <section>
+                    In 1995, the group was restructured and thus was formed Cadila Healthcare under the aegis of the Zydus group. From a humble turnover Rs. 250 crores in 1995 the group witnessed a significant financial growth and registered a turnover of over Rs. 14,253 crores in FY20.</section>
+            
+            </div>
+            
+            
+            <div class="chart"><a href="https://in.tradingview.com/chart/?symbol=NSE%3ANIFTY"><img src="indianStockImg/ZYDUS.png" alt=""></a></div>
+            
+            
+            
+        </div>
+
+        <div id="COAL INDIA" class="info" style="display: none">
+            <h2>COAL INDIA</h2><div class="nn">
+                <table>
+                    <tr class="t1">
+                        <td>Market Cap-=---₹ 3,22,896 Cr</td>
+                        <td>Stock P/E-----8.84                      </td>
+                        <td>ROCE-----63.6 %</td>
+                        
+                    </tr>
+                    <tr class="t2">
+                        <td>NP Qtr Rs.Cr.-----10943.55</td>
+                        <td>Book Value-----₹ 134
+                        </td>
+                        <td>ROE-----52.0 %
+                        </td>
+                        
+                    </tr>
+                    <tr class="t1">
+                        <td>High / Low-----₹ 542 / 226</td>
+                        <td>Dividend Yield-----4.87 %</td>
+                        <td>Face Value-----₹ 10.0</td>
+                        
+                    </tr>
+            
+                </table>
+                <section>
+                    Coal India Ltd is mainly engaged in mining and production of Coal and also operates Coal washeries. The major consumers of the company are power and steel sectors. Consumers from other sectors include cement, fertilizers, brick kilns etc.</section>
+            
+            </div>
+            
+            
+            <div class="chart"><a href="https://in.tradingview.com/chart/?symbol=NSE%3ANIFTY"><img src="indianStockImg/COALINDIA.png" alt=""></a></div>
+            
+            
+            
+        </div>
+        <div id="ONGC" class="info" style="display: none">
+            <h2>ONGC</h2><div class="nn">
+                <table>
+                    <tr class="t1">
+                        <td>Market Cap-=---₹ 4,29,365 Cr.</td>
+                        <td>Stock P/E-----9.42</td>
+                        <td>ROCE-----18.4 %</td>
+                        
+                    </tr>
+                    <tr class="t2">
+                        <td>NP Qtr Rs.Cr.-----10235.64</td>
+                        <td>Book Value-----₹ 268
+                        </td>
+                        <td>ROE-----16.3 %
+                        </td>
+                        
+                    </tr>
+                    <tr class="t1">
+                        <td>High / Low-----₹ 345 / 173</td>
+                        <td>Dividend Yield-----3.59 %</td>
+                        <td>Face Value-----₹ 5.00</td>
+                        
+                    </tr>
+            
+                </table>
+                <section>
+                    ONGC is the largest crude oil and natural gas Company in India, contributing around 71 per cent to Indian domestic production</section>
+            
+            </div>
+            
+            
+            <div class="chart"><a href="https://in.tradingview.com/chart/?symbol=NSE%3ANIFTY"><img src="indianStockImg/ONGC.png" alt=""></a></div>
+            
+            
+            
+        </div>
+        <div id="SAIL" class="info" style="display: none">
+            <h2>Steel Authority of India Ltd
+            </h2><div class="nn">
+                <table>
+                    <tr class="t1">
+                        <td>Market Cap-=---₹ 54,399 Cr.</td>
+                        <td>Stock P/E-----14.0</td>
+                        <td>ROCE-----8.24 %</td>
+                        
+                    </tr>
+                    <tr class="t2">
+                        <td>NP Qtr Rs.Cr.-----867.00</td>
+                        <td>Book Value-----₹ 138
+                        </td>
+                        <td>ROE-----6.62 %
+                        </td>
+                        
+                    </tr>
+                    <tr class="t1">
+                        <td>High / Low-----₹ 176 / 81.8</td>
+                        <td>Dividend Yield-----0.76 %</td>
+                        <td>Face Value-----₹ 10.0</td>
+                        
+                    </tr>
+            
+                </table>
+                <section>
+                    Steel Authority of India Limited (SAIL) is one of the largest steel-making companies in India and one of the Maharatnas of the countrys Central Public Sector Enterprises. SAIL produces iron and steel at five integrated plants and three special steel plants, located principally in the eastern and central regions of India and situated close to domestic sources of raw materials. SAIL manufactures and sells a broad range of steel products.(Source : Company Web-Site)</section>
+            
+            </div>
+            
+            
+            <div class="chart"><a href="https://in.tradingview.com/chart/?symbol=NSE%3ANIFTY"><img src="indianStockImg/SAIL.png" alt=""></a></div>
+            
+            
+            
+        </div>
+        <div id="BHEL" class="info" style="display: none">
+            <h2>Bharat Heavy Electricals Ltd
+            </h2><div class="nn">
+                <table>
+                    <tr class="t1">
+                        <td>Market Cap-=---₹ 1,04,009 Cr.</td>
+                        <td>Stock P/E-----1,036</td>
+                        <td>ROCE-----3.37 %</td>
+                        
+                    </tr>
+                    <tr class="t2">
+                        <td>NP Qtr Rs.Cr.-----530.60</td>
+                        <td>Book Value-----₹ 70.2
+                        </td>
+                        <td>ROE-----1.13 %
+
+                        </td>
+                        
+                    </tr>
+                    <tr class="t1">
+                        <td>High / Low-----₹ 335 / 97.4</td>
+                        <td>Dividend Yield-----0.08 %</td>
+                        <td>Face Value-----₹ 2.00</td>
+                        
+                    </tr>
+            
+                </table>
+                <section>
+                    Bharat Heavy Electricals Ltd is an integrated power plant equipment manufacturer engaged in design, engineering, manufacture, erection, testing, commissioning and servicing of a wide range of products and services for the core sectors of the economy, viz. Power, transmission, Industry, transportation, renewable energy, Oil & Gas and defence.[1] It is the flagship engineering and manufacturing company of India owned and controlled by the Govt. of India.</section>
+            
+            </div>
+            
+            
+            <div class="chart"><a href="https://in.tradingview.com/chart/?symbol=NSE%3ANIFTY"><img src="indianStockImg/BHEL.png" alt=""></a></div>
+            
+            
+            
+        </div>
+        <div id="VARUN BEVERAGES" class="info" style="display: none">
+            <h2>Varun Beverages Ltd
+            </h2><div class="nn">
+                <table>
+                    <tr class="t1">
+                        <td>Market Cap-=---₹ 1,91,441 Cr.</td>
+                        <td>Stock P/E-----79.0</td>
+                        <td>ROCE-----28.8 %</td>
+                        
+                    </tr>
+                    <tr class="t2">
+                        <td>NP Qtr Rs.Cr.-----1261.83</td>
+                        <td>Book Value-----₹ 66.0
+                        </td>
+                        <td>ROE-----35.2 %-
+                        </td>
+                        
+                    </tr>
+                    <tr class="t1">
+                        <td>High / Low-----₹ 1,707 / 828</td>
+                        <td>Dividend Yield-----0.17 %</td>
+                        <td>Face Value-----₹ 5.00</td>
+                        
+                    </tr>
+            
+                </table>
+                <section>
+                    Varun Beverages Ltd has been associated with PepsiCo since the 1990s and is a key player in beverage industry and one of the largest franchisee of PepsiCo in the world. The company produces and distributes a wide range of carbonated soft drinks, non-carbonated drinks and packaged water sold under trademarks owned by PepsiCo.
+PepsiCo brands produced and sold by the company include Pepsi, Seven-up, Mirinda Orange, Mountain Dew, Tropicana Juices and many more.</section>
+            
+            </div>
+            
+            
+            <div class="chart"><a href="https://in.tradingview.com/chart/?symbol=NSE%3ANIFTY"><img src="indianStockImg/VB.png" alt=""></a></div>
+            
+            
+            
+        
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+       function showInfo(itemId) {
+        var infoSections = document.querySelectorAll(".info");
+        infoSections.forEach(function (section) {
+          section.style.display = "none";
+        });
+
+        var selectedSection = document.getElementById(itemId);
+        selectedSection.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

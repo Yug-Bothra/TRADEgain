@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Market</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .crypto-logo {
+      width: 50px;
+      height: 50px;
+      cursor: pointer; /* Change cursor to pointer for logos */
+    }
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1000; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      padding-top: 60px; /* Location of the box */
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+    #tradingview-chart {
+      height: 400px; /* Set height for TradingView chart */
+      width: 100%; /* Full width */
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <header class="bg-gray-900 text-white p-5 text-center">
+    <h1 class="text-3xl font-bold">Live Crypto Market</h1>
+  </header>
+
+  <main class="p-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="crypto-container">
+      <!-- Cards will be populated here dynamically -->
+    </div>
+    
+    <!-- Modal for Chart -->
+    <div id="chartModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close" style="cursor:pointer;">&times;</span>
+        <div id="tradingview-chart"></div> <!-- Chart container -->
+      </div>
+    </div>
+  </main>
+
+  <script src="morecoin.js"></script>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+</body>
+</html>

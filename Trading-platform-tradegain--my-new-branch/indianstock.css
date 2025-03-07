@@ -1,0 +1,156 @@
+.navbar{
+    --bs-bg-opacity: .8;
+    height: 65px;
+    font-size: 25px;
+    /* position: sticky; */
+}
+.navbar-brand{
+    font-weight: bolder;
+    color: greenyellow;
+    font-size: 30px;
+}
+.carousel-item{
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    border: 1px solid black(0.2);
+    
+}
+.container-fluid{
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+}
+
+
+
+
+
+.container {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    /* margin-top: 10px; */
+    border: none;
+    width: 100%;
+}
+
+.sidebar {
+    width: 25%;
+    /* background-color: #f4f4f4; */
+    padding: 20px;
+    /* box-shadow: 2px 0 5px rgb(222, 182, 155, 1.5); */
+   
+    color: black;
+    margin: 0px;
+    border: 2px solid white;
+    /* margin-right: 0px; */
+}
+.content {
+    margin: 0px;
+    width: 75%;
+    padding: 20px;
+    color: aliceblue;
+    /* box-shadow:  2px 0 5px rgb(222, 182, 155, 1.5); */
+    background-color: whitesmoke;
+    /* background-size:cover ; */
+}
+
+.item-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* background-image: url(img2.jpeg); */
+    background-color: transparent;
+    font-size: 30px;
+  
+    /* border: 1px solid blacklack; */
+    
+
+}
+
+.item-list li {
+    padding: 10px;
+    cursor: pointer;
+    
+    
+}
+
+
+
+.info {
+    display: none;
+}
+h2{
+    color: rgba(9, 215, 36, 0.836);
+    font-size: 38px;
+    /* border: 5px solid greenyellow;
+   color: rgb(203, 103, 103); */
+}
+
+
+
+
+.nn{
+    display: flex;
+    border: 1px solid black;
+
+}
+table{
+    
+    width: 75%;
+    height: 450px;
+   
+
+}
+.t1{
+    background:rgb(106, 148, 182);
+    font-size: 25px;
+}
+.t2{
+    background-color: rgb(64, 97, 126);
+    font-size: 25px;
+    height: 150px;
+}
+section{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    /* margin-top: 0px; */
+    background: rgb(42, 79, 108);
+
+    font-size: 18px;
+}
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+.chart{
+    height: 460px;
+    width: 100%;
+}
+.chart img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    border: none;
+    border-radius: 0;
+  
+}
+.alert{
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+    color: black;
+    
+}
+.alert:hover{
+    color: hotpink;
+    font-size: 40px;
+    transition: 1s;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendations</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1086fd93;
+            padding-top: 50px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgb(180, 20, 20);
+            
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+            font-style: italic;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+        img{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="form-title">Book Recommended</h1>
+        <form>
+            <!-- Book 1 -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Book 1</h5>
+                    <div class="mb-3">
+                        <label for="book1-title" class="form-label">The Intelligent Investor</label>
+                        <!-- <input type="text" class="form-control" id="book1-title" placeholder="Enter book title" required> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="book1-author" class="form-label">Benjamin Graham, 1949</label>
+                        <!-- <input type="text" class="form-control" id="book1-author" placeholder="Enter author name" required> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="book1-genre" class="form-label">The Intelligent Investor by Benjamin Graham, first published in 1949, is a widely acclaimed book on value investing. The book provides strategies on how to successfully use value investing in the stock market. Historically, the book has been one of the most popular books on investing and Graham's legacy remains</label>
+                        <!-- <input type="text" class="form-control" id="book1-genre" placeholder="Enter genre" required> -->
+                         <div><img src="bookimage/img1.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat the above block for each book (Book 2 to Book 10) -->
+            <!-- Example for Book 2 -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Book 2</h5>
+                    <div class="mb-3">
+                        <label for="book2-title" class="form-label">Trading in the Zone: Master the Market with Confidence, Discipline, and a Winning Attitude</label>
+                        <!-- <input type="text" class="form-control" id="book2-title" placeholder="Enter book title" required> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="book2-author" class="form-label">Mark Douglas</label>
+                        <!-- <input type="text" class="form-control" id="book2-author" placeholder="Enter author name" required> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="book2-genre" class="form-label">Douglas uncovers the underlying reasons for lack of consistency and helps traders overcome the ingrained mental habits that cost them money.  He takes on the myths of the market and exposes them one by one teaching traders to look beyond random outcomes, to understand the true realities of risk, and to be comfortable with the "probabilities" of market movement that governs all market speculation.</label>
+                        <!-- <input type="text" class="form-control" id="book2-genre" placeholder="Enter genre" required> -->
+                         <img src="bookimage/img2.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat similarly for Books 3 to 10 -->
+            <!-- Book 10 -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Book 3</h5>
+                    <div class="mb-3">
+                        <label for="book10-title" class="form-label">One Up on Wall Street</label>
+                        <!-- <input type="text" class="form-control" id="book10-title" placeholder="Enter book title" required> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="book10-author" class="form-label">Peter Lynch, 1989</label>
+                        <!-- <input type="text" class="form-control" id="book10-author" placeholder="Enter author name" required> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="book10-genre" class="form-label">In easy-to-follow terminology, Lynch offers directions for sorting out the long shots from the no shots by spending just a few minutes with a company's financial statements. His advice for producing "tenbaggers" can turn a stock portfolio into a star performer!</label>
+                        <!-- <input type="text" class="form-control" id="book10-genre" placeholder="Enter genre" required> -->
+                         <img src="bookimage/img3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Book 4</h5>
+                    <div class="mb-3">
+                        <label for="book10-title" class="form-label">Reminiscences of a Stock Operator</label>
+                        <!-- <input type="text" class="form-control" id="book10-title" placeholder="Enter book title" required> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="book10-author" class="form-label">Edwin Lefèvre, 1923</label>
+                        <!-- <input type="text" class="form-control" id="book10-author" placeholder="Enter author name" required> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="book10-genre" class="form-label">Reminiscences of a Stock Operator is a 1923 roman à clef by American author Edwin Lefèvre. It is told in the first person by a character inspired by the life of stock trader Jesse Livermore up to that point. The book remains in print.</label>
+                        <!-- <input type="text" class="form-control" id="book10-genre" placeholder="Enter genre" required> -->
+                         <img src="bookimage/img4.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Book 5</h5>
+                    <div class="mb-3">
+                        <label for="book10-title" class="form-label">Market Wizards</label>
+                        <!-- <input type="text" class="form-control" id="book10-title" placeholder="Enter book title" required> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="book10-author" class="form-label">Jack D. Schwager, 1989</label>
+                        <!-- <input type="text" class="form-control" id="book10-author" placeholder="Enter author name" required> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="book10-genre" class="form-label">The world's top trader's reveal the secrets of their phenomenal success!  How do the world's most successful traders amass tens, hundreds of millions of dollars a year? Are they masters of an occult knowledge, lucky winners in a random market lottery, natural-born virtuosi—Mozarts of the markets? </label>
+                        <!-- <input type="text" class="form-control" id="book10-genre" placeholder="Enter genre" required> -->
+                         <img src="bookimage/img5.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Book 6</h5>
+                    <div class="mb-3">
+                        <label for="book10-title" class="form-label">The disciplined trader</label>
+                        <!-- <input type="text" class="form-control" id="book10-title" placeholder="Enter book title" required> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="book10-author" class="form-label">Mark Douglas, 1990</label>
+                        <!-- <input type="text" class="form-control" id="book10-author" placeholder="Enter author name" required> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="book10-genre" class="form-label">The classic book that introduced the investment industry to the concept of trading psychology.   With rare insight based on his firsthand commodity trading experience, author Mark Douglas demonstrates how the mental matters that allow us function effectively in society are often psychological barriers in trading. </label>
+                        <!-- <input type="text" class="form-control" id="book10-genre" placeholder="Enter genre" required> -->
+                         <img src="bookimage/image.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
